@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc8861c3-218f-4c64-9281-39e8914b3604" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/quiz_analytics_backend/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server/quiz_analytics_backend/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/quiz_analytics_backend/seed_microservices.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/quiz_analytics_backend/seed_microservices.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +127,7 @@
       <workItem from="1785995855178" duration="466000" />
       <workItem from="1785996361810" duration="11749000" />
       <workItem from="1786011646571" duration="4582000" />
-      <workItem from="1786016254475" duration="5635000" />
+      <workItem from="1786016254475" duration="7037000" />
     </task>
     <servers />
   </component>
