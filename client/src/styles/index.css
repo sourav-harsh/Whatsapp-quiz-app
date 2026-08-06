@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-wa-bg text-wa-text antialiased;
+  }
+}
+
+@layer components {
+  .wa-shell {
+    @apply mx-auto flex min-h-screen w-full max-w-3xl flex-col bg-wa-panel shadow-panel;
+  }
+
+  .wa-header {
+    @apply sticky top-0 z-20 flex items-center gap-3 bg-wa-tealDark px-4 py-3 text-white;
+  }
+
+  .wa-body {
+    @apply flex-1 bg-wa-bg bg-chat-pattern px-4 py-5;
+  }
+
+  .wa-bubble {
+    @apply max-w-[85%] rounded-2xl bg-white px-4 py-3 text-[15px] leading-relaxed shadow-bubble;
+  }
+
+  .wa-bubble-out {
+    @apply ml-auto max-w-[85%] rounded-2xl bg-wa-greenLight px-4 py-3 text-[15px] leading-relaxed shadow-bubble;
+  }
+
+  .wa-row {
+    @apply flex w-full items-center gap-3 rounded-xl bg-white px-3 py-3 text-left shadow-bubble transition hover:bg-wa-bubble focus:outline-none focus-visible:ring-2 focus-visible:ring-wa-teal;
+  }
+
+  .wa-btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-wa-green px-6 py-3 text-sm font-semibold text-white transition hover:bg-wa-teal disabled:cursor-not-allowed disabled:bg-wa-muted/50;
+  }
+
+  .wa-btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-wa-teal px-6 py-3 text-sm font-semibold text-wa-teal transition hover:bg-wa-teal hover:text-white;
+  }
+
+  .wa-option {
+    @apply flex w-full items-center gap-3 rounded-2xl border border-wa-border bg-white px-4 py-3 text-left text-[15px] transition hover:border-wa-teal focus:outline-none focus-visible:ring-2 focus-visible:ring-wa-teal;
+  }
+
+  .wa-option-active {
+    @apply border-wa-green bg-wa-greenLight;
+  }
+}
