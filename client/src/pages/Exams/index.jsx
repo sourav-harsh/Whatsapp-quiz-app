@@ -43,6 +43,8 @@ export default function ExamsPage() {
           onSelect={() => navigate(`/exams/${exam._id}/subjects`)}
         />
       ))}
+
+        {/*<button className="wa-bubble animate-pop bg-blue-500 text-white"  onClick={() => navigate("/fatigue-analysis")}>Fatigue Analysis </button>*/}
     </PageShell>
   );
 }
