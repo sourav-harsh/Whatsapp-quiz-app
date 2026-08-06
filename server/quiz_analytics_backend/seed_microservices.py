@@ -143,15 +143,15 @@ async def seed_mongodb(db_schema: DatabaseSchema, mongo_uri: str = "mongodb://lo
     client = AsyncIOMotorClient(mongo_uri)
 
     user_db = client["user_db"]
-    quiz_db = client["quiz_db"]
+    exam_db = client["exam_db"]
     analytics_db = client["analytics_db"]
 
     print("\nConnecting to MongoDB and clearing old seed data...")
     await user_db["users"].delete_many({})
-    await quiz_db["exams"].delete_many({})
-    await quiz_db["subjects"].delete_many({})
-    await quiz_db["chapters"].delete_many({})
-    await quiz_db["questions"].delete_many({})
+    await exam_db["exams"].delete_many({})
+    await exam_db["subjects"].delete_many({})
+    await exam_db["chapters"].delete_many({})
+    await exam_db["questions"].delete_many({})
     await analytics_db["question_attempts"].delete_many({})
 
     # 1. Generate real native ObjectIds for _id mapping
@@ -222,10 +222,10 @@ async def seed_mongodb(db_schema: DatabaseSchema, mongo_uri: str = "mongodb://lo
 
     print("Seeding data (_id as ObjectId, foreign keys as strings)...")
     await insert_collection(user_db["users"], user_docs, "users")
-    await insert_collection(quiz_db["exams"], exam_docs, "exams")
-    await insert_collection(quiz_db["subjects"], subject_docs, "subjects")
-    await insert_collection(quiz_db["chapters"], chapter_docs, "chapters")
-    await insert_collection(quiz_db["questions"], question_docs, "questions")
+    await insert_collection(exam_db["exams"], exam_docs, "exams")
+    await insert_collection(exam_db["subjects"], subject_docs, "subjects")
+    await insert_collection(exam_db["chapters"], chapter_docs, "chapters")
+    await insert_collection(exam_db["questions"], question_docs, "questions")
 
     print("\nSUCCESS: Databases seeded with ObjectId _ids and string foreign keys!")
     client.close()

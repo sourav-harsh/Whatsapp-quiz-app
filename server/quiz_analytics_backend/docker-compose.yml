@@ -38,7 +38,7 @@ services:
     container_name: exam-service
     environment:
       - MONGODB_URL=mongodb://mongodb:27017
-      - DATABASE_NAME=quiz_db
+      - DATABASE_NAME=exam_db
       - RABBITMQ_URL=amqp://guest:guest@rabbitmq:5672/
     depends_on:
       - mongodb
